@@ -1,0 +1,15 @@
+[project]
+name = "test-agente-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "agno>=2.3.26",
+    "openai>=2.15.0",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.34.0",
+    "python-multipart>=0.0.20",
+    "ollama>=0.6.1",
+    "pydantic-settings>=2.0.0",
+]

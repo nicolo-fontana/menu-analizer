@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Analyzer - Carica il tuo Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍝 Menu Analyzer</h1>
+            <p class="subtitle">Carica l'immagine del menu e scopri i piatti con le loro immagini</p>
+        </header>
+
+        <!-- Upload Section -->
+        <div class="upload-section" id="uploadSection">
+            <div class="upload-box">
+                <div class="upload-icon">📤</div>
+                <h2>Carica Immagine Menu</h2>
+                <p>Trascina qui l'immagine o clicca per selezionare</p>
+                <input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg" hidden>
+                <button class="btn-primary" id="selectFileBtn">Seleziona File</button>
+                <div class="file-preview" id="filePreview" style="display: none;">
+                    <img id="previewImage" src="" alt="Anteprima">
+                    <p id="fileName"></p>
+                    <button class="btn-success" id="uploadBtn">Analizza Menu</button>
+                    <button class="btn-secondary" id="cancelBtn">Annulla</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Section -->
+        <div class="loading-section" id="loadingSection" style="display: none;">
+            <div class="spinner"></div>
+            <h2>Analisi in corso...</h2>
+            <p>Stiamo processando il menu e generando le immagini dei piatti</p>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-header">
+                <h2>Menu Analizzato</h2>
+                <button class="btn-secondary" id="newUploadBtn">Carica Nuovo Menu</button>
+            </div>
+
+            <!-- Menu Info -->
+            <div class="menu-info" id="menuInfo"></div>
+
+            <!-- Piatti Grid -->
+            <div class="section-header">
+                <h3>Piatti</h3>
+            </div>
+            <div class="piatti-grid" id="piattiGrid"></div>
+
+            <!-- Bevande Section -->
+            <div class="section-header" id="bevandeHeader" style="display: none;">
+                <h3>Bevande</h3>
+            </div>
+            <div class="bevande-list" id="bevandeList"></div>
+        </div>
+
+        <!-- Error Section -->
+        <div class="error-section" id="errorSection" style="display: none;">
+            <div class="error-box">
+                <div class="error-icon">⚠️</div>
+                <h2>Errore</h2>
+                <p id="errorMessage"></p>
+                <button class="btn-primary" id="retryBtn">Riprova</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
