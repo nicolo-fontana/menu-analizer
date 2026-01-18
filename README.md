@@ -9,8 +9,8 @@ API FastAPI che analizza immagini di menu di ristoranti utilizzando AI per estra
 
 ```bash
 # Clona il repository
-git clone <url-repository>
-cd test-agente-ai
+git clone https://github.com/nicolo-fontana/menu-analizer.git
+cd menu-analizer
 
 # Installa le dipendenze
 uv sync
